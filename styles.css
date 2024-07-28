@@ -1,0 +1,169 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+}
+
+/* Stylish Font for Hero Section */
+.stylish-font {
+    font-family: 'Pacifico', cursive;
+    color: #ff0099;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 0;
+}
+
+/* Hero Section */
+header.hero {
+    background: linear-gradient(135deg, #1d2b64, #f8cdda);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0; /* Adjust padding for spacing */
+}
+
+header.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+header.hero .btn-primary {
+    background: #ff0099;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+header.hero .btn-primary:hover {
+    background: #e6007e;
+}
+
+header.hero h1.display-4 {
+    font-size: 3rem; /* Adjust size as needed */
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section */
+#about {
+    background: #333;
+    color: #fff;
+    padding: 60px 0;
+}
+
+/* Products Section */
+#products {
+    background: #111;
+    padding: 60px 0;
+}
+
+#products h2.text-center {
+    color: #000;
+}
+
+.product-card {
+    background: #222;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card .card-img-wrapper {
+    overflow: hidden;
+    border-bottom: 2px solid #ff0099;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-img-wrapper {
+    transform: scale(1.1);
+}
+
+.product-card img {
+    width: 100%; /* Ensure all images have the same size */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Cover the container without stretching */
+    transition: transform 0.3s ease;
+}
+
+/* Contact Section */
+#contact {
+    background: #222;
+    color: #fff;
+    padding: 60px 0;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    padding: 10px 0;
+}
+
+/* 3D Animation */
+@keyframes rotateBackground {
+    from {
+        transform: rotateY(0deg);
+    }
+    
+}
+
+.hero {
+    animation: rotateBackground 60s linear infinite;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header.hero {
+        padding: 60px 0;
+    }
+
+    header.hero h1.display-4 {
+        font-size: 2rem;
+    }
+
+    .product-card {
+        margin-bottom: 20px;
+    }
+
+    .product-card img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    header.hero h1.display-4 {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+    }
+}
+
+/* Custom font import */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
